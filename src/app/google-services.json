@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1062599119954",
+    "firebase_url": "https://easymed-58b15.firebaseio.com",
+    "project_id": "easymed-58b15",
+    "storage_bucket": "easymed-58b15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062599119954:android:ead788894d29b3e5",
+        "android_client_info": {
+          "package_name": "com.example.easymed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062599119954-a4fnt9oms2ooef1dn998n2m0sqlodd6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1Mv70J6xPH52LNnxVgoj1sKF7d9o9FWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062599119954-a4fnt9oms2ooef1dn998n2m0sqlodd6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
