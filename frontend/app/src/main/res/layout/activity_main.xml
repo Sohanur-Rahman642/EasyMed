@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/doctorNameTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/doctor_name"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textIsSelectable="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/doctorTypeTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/doctor_type"
+        android:textColor="@android:color/background_dark"
+        android:textSize="19sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_doctor"
+        android:textColor="@android:color/background_dark"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/doctor_description"
+        android:textSize="15sp"
+
+        />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:text="@string/book_appointment"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light"/>
+
+</LinearLayout>
