@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">loginActivity</string>
+    <string name="password">Password</string>
 </resources>
