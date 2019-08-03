@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#67032F"
 
-    tools:context=".MainActivity">
+    tools:context=".SignupActivity">
 
     <EditText
         android:id="@+id/etFirstname"

@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button a,b,c,d,e,f,g,h,i,j;
+    Button f,g;
     Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
