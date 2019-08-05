@@ -106,7 +106,18 @@
 
 
 
+
         </com.google.android.material.tabs.TabLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+
+            ></androidx.viewpager.widget.ViewPager>
+
 
 
 
