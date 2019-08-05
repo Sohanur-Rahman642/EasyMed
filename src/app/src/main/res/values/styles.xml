@@ -19,4 +19,21 @@
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
     </style>
 
+
+    <style name="Tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+
+
+
+    </style>
+
+
+    <style name="Tab_style" parent="@style/Widget.Design.TabLayout">
+
+        <item name="tabIndicatorColor">#00BCD4</item>
+
+    </style>
+
 </resources>
