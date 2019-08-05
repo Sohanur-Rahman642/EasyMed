@@ -43,5 +43,9 @@ dependencies {
 
     //FireBase dependencies
    implementation 'com.google.firebase:firebase-core:17.0.0'
+
+    //SearchView
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
+
 }
 apply plugin: 'com.google.gms.google-services'
