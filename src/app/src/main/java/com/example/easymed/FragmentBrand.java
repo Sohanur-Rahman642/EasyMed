@@ -14,9 +14,7 @@ public class FragmentBrand extends Fragment {
     View view;
 
 
-    public static FragmentBrand newInstance(){
-        return new FragmentBrand();
-    }
+
 
     @Nullable
     @Override

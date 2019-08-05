@@ -13,9 +13,6 @@ public class FragmentSuggestion extends Fragment {
 
     View view;
 
-    public static FragmentSuggestion newInstance(){
-        return new FragmentSuggestion();
-    }
 
     @Nullable
     @Override
