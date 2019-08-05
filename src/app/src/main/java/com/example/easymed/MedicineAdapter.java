@@ -1,6 +1,7 @@
 package com.example.easymed;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -22,22 +23,33 @@ public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.Medic
         this.context = context;
         this.medicineList = medicineList;
     }
-    
+
 
         @NonNull
         @Override
         public MedicineViewHolder onCreateViewHolder (@NonNull ViewGroup parent,int viewType){
-        return null;
+            LayoutInflater inflater = LayoutInflater.from(context);
+            View view = inflater.inflate(R.layout.store_item,null);
+
+
+            return  new MedicineViewHolder(view);
     }
 
         @Override
-        public void onBindViewHolder (@NonNull MedicineViewHolder holder,int position){
+        public void onBindViewHolder (@NonNull MedicineViewHolder medicineViewHolder,int position){
 
-    }
+            Medicine medicine = medicineList.get(position);
+            medicineViewHolder.tvMedcicineName.setText(medicine.getMedicineName());
+            medicineViewHolder.tvMediBrandName.setText(medicine.getMedicineBrandName());
+            medicineViewHolder.tvMediPower.setText(medicine.getMedicinePower());
+            medicineViewHolder.mediImage.setImageDrawable(context.getResources()
+                    .getDrawable(medicine.getMediImage(),null));
+
+        }
 
         @Override
         public int getItemCount () {
-        return 0;
+            return medicineList.size();
     }
 
 
