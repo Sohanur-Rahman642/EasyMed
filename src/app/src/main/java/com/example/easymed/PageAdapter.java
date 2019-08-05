@@ -16,7 +16,20 @@ public class PageAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return null;
+        switch (position){
+            case 0:
+                return new FragmentStore();
+
+            case 1:
+                return new FragmentBrand();
+
+            case 2:
+                return new FragmentSuggestion();
+
+            default:
+                return new FragmentStore();
+        }
+
     }
 
 
