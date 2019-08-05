@@ -1,4 +1,27 @@
 package com.example.easymed;
 
-public class FragmentSuggestion {
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+public class FragmentSuggestion extends Fragment {
+
+    View view;
+
+    public static FragmentSuggestion newInstance(){
+        return new FragmentSuggestion();
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        view = inflater.inflate(R.layout.suggestion_fragment,container,false);
+        return view;
+    }
 }
