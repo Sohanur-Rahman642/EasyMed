@@ -3,6 +3,7 @@ package com.example.easymed;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabItem;
@@ -35,6 +36,47 @@ public class MainActivity extends AppCompatActivity {
 
         pageAdapter = new PageAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
+
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+
+                Fragment selectedFragment = null;
+                if(tab.getPosition() == 1){
+
+                    selectedFragment = new FragmentStore();
+
+                }
+                if(tab.getPosition() == 2){
+
+                    selectedFragment = new FragmentBrand();
+
+                }
+                if(tab.getPosition() == 3){
+
+                    selectedFragment = new FragmentSuggestion();
+
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+
+
 
 
 
