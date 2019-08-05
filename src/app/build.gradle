@@ -47,5 +47,9 @@ dependencies {
     //SearchView
     implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
 
+    //Circular Imgageview
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+
 }
 apply plugin: 'com.google.gms.google-services'
