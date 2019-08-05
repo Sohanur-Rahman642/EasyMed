@@ -8,4 +8,7 @@
     <string name="book_appointment">Book an Appointment</string>
     <string name="doctor_timing">Timing</string>
     <string name="timing_details">4.00 PM - 8.00 PM</string>
+    <string name="title_activity_expert_counseling_form_activity">expert_counseling_form_activity</string>
+    <string name="doctor_fee">Fee</string>
+    <string name="fee_amount">500 Tk</string>
 </resources>

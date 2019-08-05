@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,6 +11,7 @@
     android:gravity="center"
     tools:context=".MainActivity"
     android:background="@color/background">
+
 
 
 
@@ -38,17 +41,34 @@
 
     <TextView
         android:id="@+id/doctorTimingTextViewId"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/doctor_timing"
+        android:textAlignment="viewStart"
         android:textColor="@android:color/background_light"
         android:textSize="19sp" />
 
     <TextView
         android:id="@+id/timingDetailsTextViewId"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/timing_details"
+        android:textColor="@android:color/background_light"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/doctorFeeTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doctor_fee"
+        android:textColor="@android:color/background_light"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/feeAmountTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fee_amount"
         android:textColor="@android:color/background_light"
         android:textSize="19sp" />
 
@@ -79,9 +99,9 @@
         android:background="@android:color/holo_blue_dark"
         android:gravity="center"
         android:text="@string/book_appointment"
+        android:textColor="@android:color/background_light"
         android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/background_light"/>
+        android:textStyle="bold" />
 
 
 
