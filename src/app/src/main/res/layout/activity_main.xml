@@ -20,7 +20,34 @@
         android:background="@color/colorPrimaryDark"
         >
 
-        
+
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+
+            style="@style/MaterialSearchBarLight"
+            app:mt_speechMode="false"
+            app:mt_hint="Enter a medicine name"
+            app:mt_maxSuggestionsCount="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchBar"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"
+            android:layout_marginTop="20dp"
+
+
+
+            app:mt_navIconEnabled="true"
+            app:mt_placeholder="Search medicines "
+            android:elevation="5dp"
+            android:outlineProvider="bounds"
+            />
+
+
+
 
 
     </com.google.android.material.appbar.AppBarLayout>
