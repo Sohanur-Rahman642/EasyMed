@@ -1,7 +1,9 @@
 package com.example.easymed;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -16,6 +18,16 @@ public class SignUpActivity extends AppCompatActivity {
 
         caButton = (Button) findViewById(R.id.caButton);
         alreadyCaButton = (Button) findViewById(R.id.alreadyCa_button);
+
+
+
+        caButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
