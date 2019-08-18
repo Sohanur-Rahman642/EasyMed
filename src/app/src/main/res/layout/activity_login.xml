@@ -89,6 +89,29 @@
 
         />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/password_text_input"
+        app:layout_constraintStart_toEndOf="@id/signUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        style="@style/Button"
+        android:text="Login"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-condensed"
+
+        app:cornerRadius="16dp"
+        app:backgroundTint="#3F51B5"
+
+        />
+
+
+
 
 
 
