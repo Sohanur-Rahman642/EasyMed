@@ -154,6 +154,43 @@
 
 
 
+    //City
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/city_input_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/address_input_field"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        style="@style/TextInputLayout"
+
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+
+
+        android:hint="@string/city">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="18sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
 
 
 
