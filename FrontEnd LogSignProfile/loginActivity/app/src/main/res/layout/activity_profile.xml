@@ -11,6 +11,14 @@
 
     tools:context=".SignupActivity">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <Button
         android:id="@+id/bDone2"
         android:layout_width="wrap_content"
@@ -261,5 +269,8 @@
         android:layout_marginRight="1dp"
         android:text="Done" />
 
+
+</RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
