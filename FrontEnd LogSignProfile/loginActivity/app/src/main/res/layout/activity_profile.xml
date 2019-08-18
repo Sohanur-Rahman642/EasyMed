@@ -12,7 +12,7 @@
     tools:context=".SignupActivity">
 
     <Button
-        android:id="@+id/bEdit1"
+        android:id="@+id/bDone2"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
@@ -21,7 +21,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginRight="40dp"
 
-        android:text="Edit" />
+        android:text="Done" />
 
     <EditText
         android:id="@+id/editingFirst"
@@ -238,16 +238,28 @@
         android:textAlignment="center" />
 
     <Button
-        android:id="@+id/bEdit2"
+        android:id="@+id/bDone3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bEdit1"
+        android:layout_below="@+id/bDone2"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:text="Edit" />
+        android:text="Done" />
+
+    <Button
+        android:id="@+id/bDone4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bDone3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:text="Done" />
 
 
 </RelativeLayout>
