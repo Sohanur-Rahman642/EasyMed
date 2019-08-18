@@ -19,4 +19,50 @@
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
     </style>
 
+
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="boxBackgroundColor">#5D1049</item>
+
+
+
+    </style>
+
+
+    <style name="TextInputLayou2" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextAppearance">@style/HintText2</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="boxBackgroundColor">#FFC107</item>
+
+    </style>
+
+
+
+    <style name="TextInputLayout3" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextAppearance">@style/HintText3</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="boxBackgroundColor">#FFC107</item>
+
+    </style>
+
+    <style name="HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColorHint">#FFFFFF</item>
+
+    </style>
+
+
+
+    <style name="HintText2" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColorHint">#FFFFFF</item>
+
+    </style>
+
+    <style name="HintText3" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+
+    </style>
+
+
 </resources>
