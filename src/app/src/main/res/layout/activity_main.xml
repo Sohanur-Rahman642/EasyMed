@@ -1,13 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorPrimaryDark"
+
+
+        >
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+
+            style="@style/MaterialSearchBarLight"
+            app:mt_speechMode="false"
+            app:mt_hint="Enter a medicine name"
+            app:mt_maxSuggestionsCount="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchBar"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"
+            android:layout_marginTop="20dp"
+
+
+
+            app:mt_navIconEnabled="true"
+            app:mt_placeholder="Search medicines "
+            android:elevation="5dp"
+            android:outlineProvider="bounds"
+            />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:tabTextAppearance="@style/Tab_text"
+            style="@style/Tab_style"
+
+            android:layout_marginTop="15dp"
+
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+
+            app:tabTextColor="@color/colorPrimary"
+            app:tabSelectedTextColor="#00BCD4"
+            android:background="@color/colorPrimaryDark"
+
+            app:tabIndicatorHeight="2dp"
 
 
 
 
-</LinearLayout>
+
+            >
+
+
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store"
+
+
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brand"
+
+
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_suggestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Symptoms"
+
+
+                />
+
+
+
+
+
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+
+            ></androidx.viewpager.widget.ViewPager>
+
+
+
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
