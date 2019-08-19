@@ -231,6 +231,38 @@
 
 
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/baap_btn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/til_date_picker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:text="Book An Appointment"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+
+
+
+
+            app:rippleColor="@color/button_pressed"
+            android:backgroundTint="#FFFFFF"
+            app:strokeWidth="2dp"
+            app:strokeColor="#FF9800"
+            android:textColor="#FF9800" />
+
+        
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
