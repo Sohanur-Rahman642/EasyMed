@@ -28,5 +28,32 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <TextView
+        android:id="@+id/tv_doctor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+
+
+        android:fontFamily="sans-serif-condensed"
+        android:text="Dr. Deviprasad"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_profile_image"
+
+        android:padding="10dp"
+        android:background="#3F51B5"
+
+
+        />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
