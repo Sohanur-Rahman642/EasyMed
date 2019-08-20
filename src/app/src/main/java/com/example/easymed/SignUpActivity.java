@@ -1,14 +1,26 @@
 package com.example.easymed;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+/**
+ * The type Sign up activity.
+ */
 public class SignUpActivity extends AppCompatActivity {
 
-    Button caButton,alreadyCaButton;
+    /**
+     * The Ca button.
+     */
+    Button caButton,
+    /**
+     * The Already ca button.
+     */
+    alreadyCaButton;
 
 
     @Override

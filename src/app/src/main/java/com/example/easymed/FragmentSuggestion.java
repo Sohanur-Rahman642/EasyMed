@@ -9,8 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+/**
+ * The type Fragment suggestion.
+ */
 public class FragmentSuggestion extends Fragment {
 
+    /**
+     * The View.
+     */
     View view;
 
 
