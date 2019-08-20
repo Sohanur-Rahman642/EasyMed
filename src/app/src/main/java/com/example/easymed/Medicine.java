@@ -5,13 +5,13 @@ public class Medicine {
     private String medicineName;
     private String medicineBrandName;
     private  String medicinePower;
-    private int mediImage;
+    private String mediImage;
 
     public Medicine() {
     }
 
     public Medicine(String medicineName, String medicineBrandName,
-                    String medicinePower, int medi_image) {
+                    String medicinePower, String  medi_image) {
         this.medicineName = medicineName;
         this.medicineBrandName = medicineBrandName;
         this.medicinePower = medicinePower;
@@ -42,11 +42,11 @@ public class Medicine {
         this.medicinePower = medicinePower;
     }
 
-    public int getMediImage() {
+    public String getMediImage() {
         return mediImage;
     }
 
-    public void setMediImage(int medi_image) {
+    public void setMediImage(String medi_image) {
         this.mediImage = medi_image;
     }
 }

@@ -38,12 +38,12 @@ public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.Medic
         @Override
         public void onBindViewHolder (@NonNull MedicineViewHolder medicineViewHolder,int position){
 
-            Medicine medicine = medicineList.get(position);
+            /*Medicine medicine = medicineList.get(position);
             medicineViewHolder.tvMedcicineName.setText(medicine.getMedicineName());
             medicineViewHolder.tvMediBrandName.setText(medicine.getMedicineBrandName());
             medicineViewHolder.tvMediPower.setText(medicine.getMedicinePower());
             medicineViewHolder.mediImage.setImageDrawable(context.getResources()
-                    .getDrawable(medicine.getMediImage(),null));
+                    .getDrawable(medicine.getMediImage(),null));*/
 
         }
 
