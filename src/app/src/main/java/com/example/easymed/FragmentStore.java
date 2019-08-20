@@ -12,8 +12,11 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,13 +47,34 @@ public class FragmentStore extends Fragment {
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
 
 
+
+
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-
+        DisplayMedicineCards();
 
 
 
 
         return rootView;
     }
+
+
+    private void DisplayMedicineCards() {
+
+
+
+        FirebaseRecyclerOptions<Medicine> options =
+                new FirebaseRecyclerOptions.Builder<Medicine>()
+                        .setQuery(medicineRef, Medicine.class)
+                        .build();
+
+
+
+
+    }
+
+
+
+
 }

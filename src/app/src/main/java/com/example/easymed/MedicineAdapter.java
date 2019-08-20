@@ -53,13 +53,13 @@ public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.Medic
     }
 
 
-        public class MedicineViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-            private TextView tvMedcicineName;
-            private TextView tvMediBrandName;
-            private TextView tvMediPower;
-            private ImageView mediImage;
-            private Button quickViewButton;
-            private Button addToCartButton;
+        public static class MedicineViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+                     TextView tvMedcicineName;
+                   TextView tvMediBrandName;
+                    TextView tvMediPower;
+                 ImageView mediImage;
+                 Button quickViewButton;
+                     Button addToCartButton;
 
             public MedicineViewHolder(View itemView) {
                 super(itemView);
