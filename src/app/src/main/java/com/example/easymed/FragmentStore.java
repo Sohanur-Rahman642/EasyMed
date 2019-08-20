@@ -71,6 +71,40 @@ public class FragmentStore extends Fragment {
 
 
 
+        FirebaseRecyclerAdapter<Medicine, MedicineAdapter.MedicineViewHolder> firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<Medicine, MedicineAdapter.MedicineViewHolder>(options)
+
+                {
+                    @Override
+                    protected void onBindViewHolder(@NonNull MedicineAdapter.MedicineViewHolder holder, int position, @NonNull Medicine medicine) {
+
+
+                        final String packagekey = getRef(position).getKey();
+
+                        holder.tvMedcicineName.setText(medicine.getMedicineName());
+                        holder.tvMediBrandName.setText(medicine.getMedicineBrandName());
+                        holder.tvMediPower.setText(medicine.getMedicinePower());
+                        Picasso.get().load(medicine.getMediImage())
+                                .fit().centerCrop().into(holder.mediImage);
+
+                    }
+
+                    @NonNull
+                    @Override
+                    public MedicineAdapter.MedicineViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+
+                        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.store_item,viewGroup,false);
+
+                        MedicineAdapter.MedicineViewHolder viewHolder = new MedicineAdapter.MedicineViewHolder(view);
+                        return viewHolder;
+                    }
+                };
+
+
+        firebaseRecyclerAdapter.startListening();
+        recyclerView.setAdapter(firebaseRecyclerAdapter);
+
+
 
     }
 
