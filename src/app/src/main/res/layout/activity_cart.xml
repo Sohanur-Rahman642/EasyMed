@@ -42,19 +42,122 @@
             app:layout_constraintStart_toStartOf="parent"
 
 
-
-
-
             >
-          <androidx.recyclerview.widget.RecyclerView
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
 
-              >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cart_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorPrimary"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cart_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    >
+
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/delete_items_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="30dp"
+
+                        android:src="@drawable/delete_forever"
+                        android:background="@color/colorPrimary"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/cart_item_text_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/delete_items_cart"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="30dp"
+
+                        android:text="medicine name here"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+
+                        />
 
 
 
-          </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cart_item_text_name"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="Tk"
+                        android:textColor="#4CAF50"
+
+                        android:textSize="18sp"
+
+
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/item_price_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/price"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="20"
+                        android:textColor="#4CAF50"
+
+                        android:textSize="18sp"
+
+
+
+                        />
+
+
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
 
 
 

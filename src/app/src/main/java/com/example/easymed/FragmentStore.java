@@ -1,5 +1,6 @@
 package com.example.easymed;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,6 +57,7 @@ public class FragmentStore extends Fragment {
 
 
 
+
         return rootView;
     }
 
@@ -76,7 +78,7 @@ public class FragmentStore extends Fragment {
 
                 {
                     @Override
-                    protected void onBindViewHolder(@NonNull MedicineAdapter.MedicineViewHolder holder, int position, @NonNull Medicine medicine) {
+                    protected void onBindViewHolder(@NonNull MedicineAdapter.MedicineViewHolder holder, int position, @NonNull final Medicine medicine) {
 
 
                         final String packagekey = getRef(position).getKey();
@@ -84,8 +86,22 @@ public class FragmentStore extends Fragment {
                         holder.tvMedcicineName.setText(medicine.getMedicineName());
                         holder.tvMediBrandName.setText(medicine.getMedicineBrandName());
                         holder.tvMediPower.setText(medicine.getMedicinePower());
+
                         Picasso.get().load(medicine.getMediImage())
                                 .fit().centerCrop().into(holder.mediImage);
+
+
+                        //Click listener for holding
+                        holder.addToCartButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+
+                                Intent intent = new Intent(getActivity(),Cart.class);
+                                intent.putExtra("mName",medicine.getMedicineName());
+                                startActivity(intent);
+                            }
+                        });
 
                     }
 
@@ -107,6 +123,7 @@ public class FragmentStore extends Fragment {
 
 
     }
+
 
 
 

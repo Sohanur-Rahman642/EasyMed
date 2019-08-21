@@ -68,7 +68,7 @@ public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.Medic
                 tvMediBrandName = (TextView) itemView.findViewById(R.id.text_brand_name);
                 tvMediPower = (TextView) itemView.findViewById(R.id.text_power);
                 mediImage = (ImageView) itemView.findViewById(R.id.store_image);
-                quickViewButton = (Button) itemView.findViewById(R.id.quick_view_btn);
+
                 addToCartButton = (Button) itemView.findViewById(R.id.add_to_cart_btn);
                 itemView.setOnClickListener(this);
 
