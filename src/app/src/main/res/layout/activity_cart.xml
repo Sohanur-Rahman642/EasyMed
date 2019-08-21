@@ -101,8 +101,33 @@
 
                         />
 
+                    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                        android:id="@+id/ele_btn"
+                        android:layout_width="125dp"
+                        android:layout_height="45dp"
 
 
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/delete_items_cart"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="110dp"
+                        android:layout_marginEnd="30dp"
+
+                        app:initialNumber="1"
+                        app:finalNumber="10"
+
+                        app:textColor="#fff"
+                        app:textSize="7sp"
+
+                        app:backGroundColor="#3F51B5"
+                        android:theme="@style/Ele_btn_theme"
+
+
+                        >
+
+
+
+                    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 
 
 
@@ -114,9 +139,9 @@
                         android:layout_height="wrap_content"
 
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/cart_item_text_name"
+                        app:layout_constraintStart_toEndOf="@+id/delete_items_cart"
                         android:layout_marginTop="15dp"
-                        android:layout_marginStart="70dp"
+                        android:layout_marginStart="250dp"
                         android:layout_marginEnd="30dp"
                         android:text="Tk"
                         android:textColor="#4CAF50"
@@ -221,13 +246,15 @@
         </TextView>
 
 
+
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/checkout"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            app:layout_constraintTop_toBottomOf="@id/tv_total"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_amount"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
 

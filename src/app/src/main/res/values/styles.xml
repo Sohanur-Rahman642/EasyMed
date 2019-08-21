@@ -118,6 +118,10 @@
     </style>
 
 
+
+
+
+
     <style name="Tab_style" parent="@style/Widget.Design.TabLayout">
 
         <item name="tabIndicatorColor">#00BCD4</item>
@@ -128,6 +132,19 @@
 
 
 
+
+
+    <style name="Ele_btn_theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+
+        <item name="colorPrimary">#3F51B5</item>
+
+
+
+
+
+
+    </style>
 
 
 
