@@ -12,11 +12,6 @@ import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 
-/**
- * The type Main activity.
- * Main activity is all about search medicine and list of avilable medicines
- *
- */
 public class MainActivity extends AppCompatActivity {
 
 

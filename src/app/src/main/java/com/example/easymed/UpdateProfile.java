@@ -13,6 +13,7 @@ public class UpdateProfile extends AppCompatActivity {
 
     Button updateChanges, discardChanges;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

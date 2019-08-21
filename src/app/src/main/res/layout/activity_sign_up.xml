@@ -9,6 +9,7 @@
     android:background="#4e0d3a"
     >
 
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/firstname_input_field"
         android:layout_width="match_parent"
@@ -38,6 +39,8 @@
 
             />
     </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
 
@@ -77,6 +80,44 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
+    //Password
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_input_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@id/email_input_field"
+
+        style="@style/TextInputLayout"
+
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#ffffff"
+
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+
+        android:hint="@string/shr_hint_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+
+
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
     //Phone
 
     <com.google.android.material.textfield.TextInputLayout
@@ -84,7 +125,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        app:layout_constraintTop_toBottomOf="@id/email_input_field"
+        app:layout_constraintTop_toBottomOf="@id/password_input_field"
 
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
@@ -112,7 +153,6 @@
 
             />
     </com.google.android.material.textfield.TextInputLayout>
-
 
 
     //Address
@@ -154,39 +194,6 @@
 
 
 
-    //City
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/city_input_field"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintTop_toBottomOf="@id/address_input_field"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        style="@style/TextInputLayout"
-
-        android:textColor="#ffffff"
-        android:textColorHint="#ffffff"
-
-
-        android:hint="@string/city">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:maxLines="1"
-            android:textSize="18sp"
-
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
 
     //Gender
 
@@ -195,7 +202,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
 
-        app:layout_constraintTop_toBottomOf="@id/city_input_field"
+        app:layout_constraintTop_toBottomOf="@id/address_input_field"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="@id/age_input_field"
 
@@ -232,7 +239,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="10dp"
 
-        app:layout_constraintTop_toBottomOf="@id/city_input_field"
+        app:layout_constraintTop_toBottomOf="@id/address_input_field"
         app:layout_constraintStart_toEndOf="@id/gender_input_field"
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -253,6 +260,8 @@
 
             />
     </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
     <com.google.android.material.button.MaterialButton
@@ -297,15 +306,6 @@
 
         app:cornerRadius="16dp"
         android:textColor="#FFC107" />
-
-
-
-
-
-
-
-
-
 
 
 

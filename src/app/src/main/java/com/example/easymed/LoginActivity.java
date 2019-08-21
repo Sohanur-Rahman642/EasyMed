@@ -8,18 +8,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * The type Login activity.
- */
 public class LoginActivity extends AppCompatActivity {
 
-    /**
-     * The Login button.
-     */
     Button loginButton,
-    /**
-     * The Sign up button.
-     */
     signUpButton;
 
     @Override

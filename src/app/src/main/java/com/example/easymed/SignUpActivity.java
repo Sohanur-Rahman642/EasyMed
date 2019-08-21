@@ -5,22 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * The type Sign up activity.
- */
 public class SignUpActivity extends AppCompatActivity {
 
-    /**
-     * The Ca button.
-     */
-    Button caButton,
-    /**
-     * The Already ca button.
-     */
-    alreadyCaButton;
+    Button caButton, alreadyCaButton;
+    EditText userName, userEmail, phoneNumber, userAddress, cityName, userGender, userAge;
 
 
     @Override
@@ -33,11 +25,16 @@ public class SignUpActivity extends AppCompatActivity {
 
 
 
+
+
+
+
         caButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -50,4 +47,8 @@ public class SignUpActivity extends AppCompatActivity {
         });
 
     }
+
+
+
+
 }

@@ -4,19 +4,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-/**
- * The type Page adapter.
- */
 public class PageAdapter extends FragmentPagerAdapter {
 
     private int numOfTabs;
 
-    /**
-     * Instantiates a new Page adapter.
-     *
-     * @param fm        the fm
-     * @param numOfTabs the num of tabs
-     */
     public PageAdapter(FragmentManager fm, int numOfTabs) {
         super(fm);
         this.numOfTabs = numOfTabs;

@@ -7,6 +7,9 @@
     tools:context=".ProfileActivity">
 
 
+
+
+
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
 
         android:id="@+id/profile_image"
@@ -152,6 +155,7 @@
 
 
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/below_layout"
         android:layout_width="match_parent"
@@ -229,6 +233,9 @@
             app:strokeWidth="2dp"
             app:strokeColor="#FF9800"
             android:textColor="#FF9800" />
+
+
+
 
 
 
