@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpertCounselling">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:id="@+id/doctor_profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginEnd="8dp"
+
+
+
+        android:src="@drawable/doctorprofile"
+        app:civ_border_color="#03A9F4"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_doctor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+
+
+        android:fontFamily="sans-serif-condensed"
+        android:text="Dr. Deviprasad"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_profile_image"
+
+        android:padding="10dp"
+        android:background="#3F51B5"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tv_doctor_degree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+
+        android:padding="2dp"
+
+
+        android:background="#3F51B5"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Doctor of Medicine by research (MD(Res), DM)"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_doctor_name"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_doctor_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+
+        android:padding="2dp"
+
+
+        android:background="#3F51B5"
+        android:fontFamily="sans-serif-condensed"
+        android:text="General Physician"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_doctor_degree"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tv_doctor_available_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+
+
+        android:fontFamily="sans-serif-condensed"
+        android:padding="5dp"
+        android:text="Available:"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_doctor_title" />
+
+
+    <TextView
+        android:id="@+id/tv_available_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+
+
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/corner_textview"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="5dp"
+        android:text="Monday/Wednesday (9.00 AM - 8.00 PM)"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/tv_doctor_available_time"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_doctor_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/below_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_available_schedule"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/corner_textview"
+        android:backgroundTint="#ffffff"
+
+
+
+
+        >
+
+        <TextView
+            android:id="@+id/tv_chose_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="@+id/below_layout"
+            app:layout_constraintStart_toStartOf="@+id/below_layout"
+
+            android:text="Choose Schedule: "
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#000000"
+            android:textStyle="bold"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+
+
+
+
+
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_date_picker"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_chose_schedule"
+
+            style="@style/TextInputLayou2"
+            app:startIconDrawable="@drawable/date_range"
+            app:startIconTint="#ffffff"
+
+
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Choose a date"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:maxLines="1"
+
+
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+
+
+
+
+
+
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/baap_btn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/til_date_picker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:text="Book An Appointment"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+
+
+
+
+            app:rippleColor="@color/button_pressed"
+            android:backgroundTint="#FFFFFF"
+            app:strokeWidth="2dp"
+            app:strokeColor="#FF9800"
+            android:textColor="#FF9800" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/baap_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:text="Cancel"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+
+            android:background="@drawable/corner_textview"
+            android:backgroundTint="#FFFFFF"
+            app:strokeWidth="2dp"
+            app:strokeColor="#FF9800"
+            android:textColor="#FF9800" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
