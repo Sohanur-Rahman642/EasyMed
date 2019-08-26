@@ -139,7 +139,7 @@
         android:backgroundTint="#4CAF50"
         android:fontFamily="sans-serif-condensed"
         android:padding="5dp"
-        android:text="House no: 456\nRoad no: 9/d\nBlock: D\nArea: Bashundhara R/A\nCity: Dhaka-1229"
+        android:text=""
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
