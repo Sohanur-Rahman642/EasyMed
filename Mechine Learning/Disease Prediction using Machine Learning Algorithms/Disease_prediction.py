@@ -209,7 +209,7 @@ Name = StringVar()
 
 # Heading
 w2 = Label(root, justify=LEFT,
-           text="Disease Predictor", fg="white", bg="lightBlue")
+           text="EasyMed Disease Predictor", fg="white", bg="lightBlue")
 w2.config(font=("Calibri", 30))
 w2.grid(row=1, column=0, columnspan=2, padx=100)
 
@@ -217,7 +217,7 @@ w2.grid(row=1, column=0, columnspan=2, padx=100)
 
 
 
-S1Lb = Label(root, text="Area----------------------------------->",
+S1Lb = Label(root, text="Symptom 1----------------------------------->",
              fg="white", bg="lightBlue")
 S1Lb.grid(row=7, column=0, pady=10, sticky=W)
 
@@ -238,11 +238,6 @@ S5Lb = Label(root, text="Symptom 5----------------------------------->",
 S5Lb.grid(row=11, column=0, pady=10, sticky=W)
 
 
-lrLb = Label(root, text="Decision Tree:", fg="white", bg="lightBlue")
-lrLb.grid(row=15, column=0, pady=10, sticky=W)
-
-#destreeLb = Label(root, text="Random Forest:", fg="white", #bg="darkBlue")
-#destreeLb.grid(row=17, column=0, pady=10, sticky=W)
 
 ranfLb = Label(root, text="Naive Bayes:", fg="white", bg="lightBlue")
 ranfLb.grid(row=19, column=0, pady=10, sticky=W)
@@ -268,24 +263,13 @@ S5En = OptionMenu(root, Symptom5, *OPTIONS)
 S5En.grid(row=11, column=1)
 
 
-dst = Button(root, text="Decision Tree",
-             command=DecisionTree, bg="red", fg="white")
-dst.grid(row=8, column=3, padx=10)
 
-#rnf = Button(root, text="Random forest",
-#             command=randomforest, bg="red", fg="white")
-#rnf.grid(row=9, column=3, padx=10)
 
 lr = Button(root, text="Naive Bayes",
             command=NaiveBayes, bg="red", fg="white")
 lr.grid(row=10, column=3, padx=10)
 
 # textfileds
-t1 = Text(root, height=1, width=40, bg="white", fg="black")
-t1.grid(row=15, column=1, padx=10)
-
-#t2 = Text(root, height=1, width=40, bg="white", fg="black")
-#t2.grid(row=17, column=1, padx=10)
 
 t3 = Text(root, height=1, width=40, bg="white", fg="black")
 t3.grid(row=19, column=1, padx=10)
