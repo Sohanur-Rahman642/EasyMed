@@ -12,6 +12,14 @@ import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 
+/**
+ * The type Main activity.
+ * It is the home page of our app EasyMed.
+ * Here user can search for medicine
+ * can view medicine
+ * can select medicine
+ * From here user can go to different activities that we offered as well as we will offer
+ */
 public class MainActivity extends AppCompatActivity {
 
 
