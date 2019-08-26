@@ -23,6 +23,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ * The type Login activity.
+ * Here an user can logged in if one's have an account
+ * Otherwise can go to the create account page by clicking on sign up button
+ * user can logged in only using email
+ */
 public  class LoginActivity extends AppCompatActivity {
 
     private Button loginButton;
@@ -36,8 +42,14 @@ public  class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginUser";
 
 
-
-    public static String loginEmail1, loginPass;
+    /**
+     * The constant loginEmail1.
+     */
+    public static String loginEmail1,
+    /**
+     * The Login pass.
+     */
+    loginPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +72,10 @@ public  class LoginActivity extends AppCompatActivity {
         loginPass = loginPassword.getText().toString().trim();
 
 
+        /**
+         * Call SendUserToSignUpActivity method
+         */
+
         loginSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +84,10 @@ public  class LoginActivity extends AppCompatActivity {
             }
         });
 
+
+        /**
+         * Call AllowingUserToLogin method
+         */
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,6 +97,11 @@ public  class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+        /**
+         * The type onStart method.
+         * Check if there anyone logged in with same email/user
+         */
         @Override
         protected void onStart(){
             super.onStart();
@@ -89,6 +114,13 @@ public  class LoginActivity extends AppCompatActivity {
             }
         }
 
+
+         /**
+          * The type AllowingUserToLogin method.
+          * Here it check user provide the email_id and password or not
+          * Check the Authenticity
+          * If successful then call SendUserToHome method
+          */
         private void AllowingUserToLogin () {
 
             String email = loginEmail.getText().toString();
@@ -129,6 +161,12 @@ public  class LoginActivity extends AppCompatActivity {
         }
 
 
+
+        /**
+         * The type SendUserToHome method.
+         * It takes the user to the MainActivity/Home page (after a successful Log in operation in AAllowingUserToLogin method)
+         *
+         */
         private void SendUserToHome () {
 
             Intent i = new Intent(LoginActivity.this, MainActivity.class);
@@ -138,6 +176,11 @@ public  class LoginActivity extends AppCompatActivity {
         }
 
 
+        /**
+         * The type SendUserToSignUpActivity method.
+         * After pressing sing up button, this method takes the user to the SignUpActivity/ Create Account Page
+         * Where user can create an account
+         */
         private void SendUserToSignUpActivity () {
 
             Intent registerIntent = new Intent(LoginActivity.this, SignUpActivity.class);

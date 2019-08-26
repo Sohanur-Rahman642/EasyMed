@@ -19,6 +19,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ * The type Sign up activity.
+ * Here an user can create an account if one doesn't have any
+ * To create an account an user must provide name, valid email, phone number, password, address, gender and age
+ * Call FirebaseAuth for Authentication
+ */
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText registerName, registerEmailid,  registerPhone, registerPass, registerAddress, registerGender, registerAge;
@@ -54,6 +60,12 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * The type onStart method.
+     *Check if there anyone logged in with same email/user
+     *
+     */
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -66,6 +78,16 @@ public class SignUpActivity extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * The type Create New Account method.
+     * This is the main method where it takes input from the user
+     * Inputs are String type (Datatype)
+     * In here, checks user gives inputs for every section or not
+     * Shw massages if needed
+     */
+
+
     private void CreateNewAccount() {
 
         String email= registerEmailid.getText().toString();
@@ -77,13 +99,14 @@ public class SignUpActivity extends AppCompatActivity {
         String gender = registerGender.getText().toString();
         String age = registerAge.getText().toString();
 
-       if(TextUtils.isEmpty(name)){
 
-            Toast.makeText(this, "Please Enter Your Name", Toast.LENGTH_SHORT).show();
-        }
         if(TextUtils.isEmpty(email)){
 
             Toast.makeText(this, "Please Enter Your Email", Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(name)){
+
+            Toast.makeText(this, "Please Enter Your Name", Toast.LENGTH_SHORT).show();
         }
        else if(TextUtils.isEmpty(address)){
 
@@ -140,7 +163,11 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
 
-
+    /**
+     * The type Send home method.
+     * Here after an successfully creating an account, it send user to the MainActivity/ Home Page
+     *
+     */
 
     private void SendUserToHome() {
 
