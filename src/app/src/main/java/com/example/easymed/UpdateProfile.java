@@ -9,9 +9,20 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+/**
+ * The type Update profile.
+ * Users can update their information
+ * like name, address, phone number etc.
+ */
 public class UpdateProfile extends AppCompatActivity {
 
-    Button updateChanges, discardChanges;
+    /**
+     * The Update changes.
+     */
+    Button updateChanges, /**
+     * The Discard changes.
+     */
+    discardChanges;
 
 
     @Override

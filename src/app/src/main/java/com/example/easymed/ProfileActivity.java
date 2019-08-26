@@ -12,9 +12,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ * The type Profile activity.
+ * Here users can see their own profile information
+ * they can edit or update their profile iformation
+ * by clicking update button
+ * which will take users to the updateprofile activity
+ *
+ */
 public class ProfileActivity extends AppCompatActivity {
 
-    Button updateButton, signOut;
+    /**
+     * The Update button.
+     */
+    Button updateButton, /**
+     * The Sign out.
+     * so that user can logged out from the system
+     */
+    signOut;
     private TextView viewName, viewEmail, viewPhone, viewAddress;
 
     private FirebaseAuth firebaseAuth;
@@ -46,6 +61,10 @@ public class ProfileActivity extends AppCompatActivity {
         updateButton = (Button) findViewById(R.id.update_btn);
         signOut = (Button) findViewById(R.id.sign_out_btn);
 
+        /**
+         * User can go to edit mode by clicking update button
+         */
+
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +73,10 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+
+        /**
+         * User can Sign out if one's want to by clicking signout button
+         */
 
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
