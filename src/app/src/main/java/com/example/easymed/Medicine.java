@@ -8,7 +8,7 @@ public class Medicine {
     private String medicineName;
     private String medicineBrandName;
     private  String medicinePower;
-    private int mediImage;
+    private String mediImage;
 
     /**
      * Instantiates a new Medicine.
@@ -25,7 +25,7 @@ public class Medicine {
      * @param medi_image        the medi image
      */
     public Medicine(String medicineName, String medicineBrandName,
-                    String medicinePower, int medi_image) {
+                    String medicinePower, String  medi_image) {
         this.medicineName = medicineName;
         this.medicineBrandName = medicineBrandName;
         this.medicinePower = medicinePower;
@@ -86,6 +86,13 @@ public class Medicine {
         this.medicinePower = medicinePower;
     }
 
+
+    public String getMediImage() {
+        return mediImage;
+    }
+
+    public void setMediImage(String medi_image) {
+
     /**
      * Gets medi image.
      *
@@ -101,6 +108,7 @@ public class Medicine {
      * @param medi_image the medi image
      */
     public void setMediImage(int medi_image) {
+
         this.mediImage = medi_image;
     }
 }

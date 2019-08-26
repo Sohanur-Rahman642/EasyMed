@@ -53,12 +53,12 @@ public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.Medic
         @Override
         public void onBindViewHolder (@NonNull MedicineViewHolder medicineViewHolder,int position){
 
-            Medicine medicine = medicineList.get(position);
+            /*Medicine medicine = medicineList.get(position);
             medicineViewHolder.tvMedcicineName.setText(medicine.getMedicineName());
             medicineViewHolder.tvMediBrandName.setText(medicine.getMedicineBrandName());
             medicineViewHolder.tvMediPower.setText(medicine.getMedicinePower());
             medicineViewHolder.mediImage.setImageDrawable(context.getResources()
-                    .getDrawable(medicine.getMediImage(),null));
+                    .getDrawable(medicine.getMediImage(),null));*/
 
         }
 
@@ -67,6 +67,14 @@ public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.Medic
             return medicineList.size();
     }
 
+
+        public static class MedicineViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+                     TextView tvMedcicineName;
+                   TextView tvMediBrandName;
+                    TextView tvMediPower;
+                 ImageView mediImage;
+                 Button quickViewButton;
+                     Button addToCartButton;
 
     /**
      * The type Medicine view holder.
@@ -78,6 +86,7 @@ public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.Medic
             private ImageView mediImage;
             private Button quickViewButton;
             private Button addToCartButton;
+
 
         /**
          * Instantiates a new Medicine view holder.
@@ -91,7 +100,7 @@ public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.Medic
                 tvMediBrandName = (TextView) itemView.findViewById(R.id.text_brand_name);
                 tvMediPower = (TextView) itemView.findViewById(R.id.text_power);
                 mediImage = (ImageView) itemView.findViewById(R.id.store_image);
-                quickViewButton = (Button) itemView.findViewById(R.id.quick_view_btn);
+
                 addToCartButton = (Button) itemView.findViewById(R.id.add_to_cart_btn);
                 itemView.setOnClickListener(this);
 

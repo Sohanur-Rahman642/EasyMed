@@ -105,7 +105,20 @@
         <item name="rippleColor">@color/button_pressed</item>
 
 
+
     </style>
+
+
+    <style name="Tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+
+
+
+
+    </style>
+
 
 
     <style name="Tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
@@ -118,6 +131,8 @@
     </style>
 
 
+
+
     <style name="Tab_style" parent="@style/Widget.Design.TabLayout">
 
         <item name="tabIndicatorColor">#00BCD4</item>
@@ -128,6 +143,20 @@
 
 
 
+
+
+
+    <style name="Ele_btn_theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+
+        <item name="colorPrimary">#3F51B5</item>
+
+
+
+
+
+
+    </style>
 
 
 
