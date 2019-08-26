@@ -3,6 +3,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.easymed">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -17,14 +18,23 @@
         <activity android:name=".Cart"></activity>
 
 
+
         tools:ignore="GoogleAppIndexingWarning"
-        tools:replace="android:appComponentFactory">
+        tools:replace="android:appComp
+                       
+        <activity android:name=".UpdateProfile"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity">
+
         <activity android:name=".SignUpActivity"></activity>
         <activity android:name=".LoginActivity" />
       <activity android:name=".ExpertCounselling"></activity>
 
 
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

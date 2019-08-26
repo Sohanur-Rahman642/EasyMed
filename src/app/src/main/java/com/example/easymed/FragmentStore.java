@@ -22,14 +22,21 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Fragment store.
+ */
 public class FragmentStore extends Fragment {
 
+    /**
+     * The Medicine adapter.
+     */
     MedicineAdapter medicineAdapter;
+    /**
+     * The Medicine list.
+     */
     List<Medicine> medicineList;
     RecyclerView recyclerView;
     DatabaseReference medicineRef;
-
-
 
 
     @Nullable

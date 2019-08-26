@@ -13,12 +13,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ * The type Medicine adapter.
+ */
 public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.MedicineViewHolder> {
 
 
+    /**
+     * The Context.
+     */
     public Context context;
+    /**
+     * The Medicine list.
+     */
     List<Medicine> medicineList;
 
+    /**
+     * Instantiates a new Medicine adapter.
+     *
+     * @param context      the context
+     * @param medicineList the medicine list
+     */
     public MedicineAdapter(Context context, List<Medicine> medicineList) {
         this.context = context;
         this.medicineList = medicineList;
@@ -61,7 +76,24 @@ public class MedicineAdapter extends  RecyclerView.Adapter<MedicineAdapter.Medic
                  Button quickViewButton;
                      Button addToCartButton;
 
-            public MedicineViewHolder(View itemView) {
+    /**
+     * The type Medicine view holder.
+     */
+    public class MedicineViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+            private TextView tvMedcicineName;
+            private TextView tvMediBrandName;
+            private TextView tvMediPower;
+            private ImageView mediImage;
+            private Button quickViewButton;
+            private Button addToCartButton;
+
+
+        /**
+         * Instantiates a new Medicine view holder.
+         *
+         * @param itemView the item view
+         */
+        public MedicineViewHolder(View itemView) {
                 super(itemView);
 
                 tvMedcicineName = (TextView) itemView.findViewById(R.id.text_name);
