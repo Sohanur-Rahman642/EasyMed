@@ -1,93 +1,54 @@
 package com.example.easymed;
 
 
-import android.os.Bundle;
-
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
+import android.app.ProgressDialog;
 import android.content.Intent;
-
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.widget.EditText;
-
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.FirebaseUser;
 
-public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
+public class SignUpActivity extends AppCompatActivity {
 
-    Button crButton, alreadyCrButton;
-    private EditText userName, userEmail, userPassword, phoneNumber, userAddress, userGender, userAge;
-
-    private ProgressBar progressBar;
-
-    private FirebaseAuth firebaseAuth;
-
+    private EditText registerName, registerEmailid,  registerPhone, registerPass, registerAddress, registerGender, registerAge;
+    private Button createButton;
+    private FirebaseAuth mAuth;
+    private ProgressDialog loadingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        loadingBar = new ProgressDialog(this);
 
+        mAuth =FirebaseAuth.getInstance();
 
-        progressBar = new ProgressBar(this);
+        registerName=findViewById(R.id.firstname_edit_text1);
+        registerEmailid=findViewById(R.id.email_edit_text2);
+        registerPass=findViewById(R.id.password_edit_text5);
+        registerPhone=findViewById(R.id.phone_edit_text2);
+        registerAddress=findViewById(R.id.address_edit_text2);
+        registerGender=findViewById(R.id.gender_edit_text2);
+        registerAge=findViewById(R.id.age_edit_text2);
+        createButton=findViewById(R.id.caButton);
 
-
-
-        crButton = (Button) findViewById(R.id.caButton);
-        alreadyCrButton = (Button) findViewById(R.id.alreadyCa_button);
-
-        userName = (EditText) findViewById(R.id.firstname_input_field);
-        userEmail = (EditText) findViewById(R.id.email_input_field);
-        userPassword = (EditText) findViewById(R.id.password_input_field);
-        phoneNumber = (EditText) findViewById(R.id.phone_input_field);
-        userAddress = (EditText) findViewById(R.id.address_input_field);
-        userGender = (EditText) findViewById(R.id.gender_input_field);
-        userAge = (EditText) findViewById(R.id.age_input_field);
-
-        firebaseAuth = FirebaseAuth.getInstance();
-
-//        findViewById(R.id.caButton).setOnClickListener(this);
-//
-//        findViewById(R.id.alreadyCa_button).setOnClickListener(this);
-
-
-        crButton.setOnClickListener(new View.OnClickListener() {
+        createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
-        alreadyCrButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
-                startActivity(intent);
+                CreateNewAccount();
             }
         });
 
@@ -97,126 +58,95 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     protected void onStart() {
         super.onStart();
 
-        if(firebaseAuth.getCurrentUser()!=null){
+        FirebaseUser currentUser= mAuth.getCurrentUser();
 
+        if(currentUser!=null){
+
+            SendUserToHome();
         }
     }
 
-    private void createAccount(){
-        final String name = userName.getText().toString().trim();
-        final String email = userEmail.getText().toString().trim();
-        String password = userPassword.getText().toString().trim();
-        final String phone = phoneNumber.getText().toString().trim();
-        final String address = userAddress.getText().toString().trim();
-        final String gender = userGender.getText().toString().trim();
-        final String age = userAge.getText().toString().trim();
+    private void CreateNewAccount() {
 
+        String email= registerEmailid.getText().toString();
+        String password= registerPass.getText().toString();
 
-        if(name.isEmpty()){
-            userName.setError("Name required");
-            userName.requestFocus();
-            return;
+        String name= registerName.getText().toString();
+        String phone= registerPhone.getText().toString();
+        String address= registerAddress.getText().toString();
+        String gender = registerGender.getText().toString();
+        String age = registerAge.getText().toString();
+
+       if(TextUtils.isEmpty(name)){
+
+            Toast.makeText(this, "Please Enter Your Name", Toast.LENGTH_SHORT).show();
+        }
+        if(TextUtils.isEmpty(email)){
+
+            Toast.makeText(this, "Please Enter Your Email", Toast.LENGTH_SHORT).show();
+        }
+       else if(TextUtils.isEmpty(address)){
+
+            Toast.makeText(this, "Please Enter Your Address", Toast.LENGTH_SHORT).show();
         }
 
+       else if(TextUtils.isEmpty(phone)){
 
-        if(email.isEmpty()){
-            userEmail.setError("Email required");
-            userEmail.requestFocus();
-            return;
+            Toast.makeText(this, "Please Enter Your Phone number", Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(password)){
+
+            Toast.makeText(this, "Please Enter Your Password", Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(gender)){
+
+            Toast.makeText(this, "Please Enter Your Gender", Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(age)){
+
+            Toast.makeText(this, "Please Enter Your Age", Toast.LENGTH_SHORT).show();
         }
 
+        else{
 
-        if(password.isEmpty()){
-            userPassword.setError("Password required");
-            userPassword.requestFocus();
-            return;
-        }
+            loadingBar.setTitle("Creating a new account");
+            loadingBar.setMessage("Please wait until we are creating new account...");
+            loadingBar.show();
+            loadingBar.setCanceledOnTouchOutside(true);
 
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
 
-        if(phone.isEmpty()){
-            phoneNumber.setError("Phone number required");
-            phoneNumber.requestFocus();
-            return;
-        }
-
-
-        if(address.isEmpty()){
-            userAddress.setError("Address required");
-            userAddress.requestFocus();
-            return;
-        }
+                    if(task.isSuccessful()){
 
 
-        if(gender.isEmpty()){
-            userGender.setError("Gender required");
-            userGender.requestFocus();
-            return;
-        }
 
+                        SendUserToHome();
 
-        if(age.isEmpty()){
-            userAge.setError("Age required");
-            userAge.requestFocus();
-            return;
-        }
-
-
-        progressBar.setVisibility(View.VISIBLE);
-
-        firebaseAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-
-
-                        if(task.isSuccessful()){
-                            //we will store the additional fields in firebase database
-                            User user = new User(
-                                    name,
-                                    email,
-                                    phone,
-                                    address,
-                                    gender,
-                                    age
-                            );
-
-                            FirebaseDatabase.getInstance().getReference("Users")
-                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-
-                                    progressBar.setVisibility(View.GONE);
-                                    if(task.isSuccessful()){
-                                        Toast.makeText(SignUpActivity.this, "Successfully Signing Up", Toast.LENGTH_SHORT).show();
-                                    }
-                                    else
-                                    {
-                                        Toast.makeText(SignUpActivity.this, "Unsuccessful, Please try again ", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
-                        }
-                        else
-                        {
-                            Toast.makeText(SignUpActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                        }
+                        Toast.makeText(SignUpActivity.this, "Account is created successfully! ", Toast.LENGTH_SHORT).show();
+                        loadingBar.dismiss();
                     }
-                });
+                    else {
 
-
-
-
+                        String message = task.getException().getMessage();
+                        Toast.makeText(SignUpActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+                        loadingBar.dismiss();
+                    }
+                }
+            });
+        }
 
     }
 
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.caButton:
-                createAccount();
-        }
 
+
+    private void SendUserToHome() {
+
+        Intent intent = new Intent(SignUpActivity.this, MainActivity.class);   //it was MytoursForGuide.class before
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 }
